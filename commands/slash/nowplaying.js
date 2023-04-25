@@ -53,17 +53,17 @@ const command = new SlashCommand()
         var title = title.replace(/\[/g,"")
 		const embed = new MessageEmbed()
 			.setColor(client.config.embedColor)
-			.setAuthor({ name: "Now Playing", iconURL: client.config.iconURL })
+			.setAuthor({ name: "Tocando agora", iconURL: client.config.iconURL })
 			// show who requested the song via setField, also show the duration of the song
 			.setFields([
 				{
-					name: "Requested by",
+					name: "Pedido por",
 					value: `<@${ song.requester.id }>`,
 					inline: true,
 				},
 				// show duration, if live show live
 				{
-					name: "Duration",
+					name: "Duração",
 					value: song.isStream
 						? `\`LIVE\``
 						: `\`${ prettyMilliseconds(player.position, {

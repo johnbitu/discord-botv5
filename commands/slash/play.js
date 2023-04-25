@@ -10,7 +10,7 @@ const command = new SlashCommand()
   .addStringOption((option) =>
     option
       .setName("buscar")
-      .setDescription("What am I looking for?")
+      .setDescription("O que está buscando?")
       .setAutocomplete(true)
       .setRequired(true)
   )

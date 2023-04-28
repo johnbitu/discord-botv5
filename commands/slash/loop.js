@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("loop")
-	.setDescription("Loops the current song")
+	.setDescription("Repete a música atual")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {

@@ -3,11 +3,11 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("skipto")
-	.setDescription("skip to a specific song in the queue")
+	.setDescription("pular para uma música específica na fila")
 	.addNumberOption((option) =>
 		option
 			.setName("number")
-			.setDescription("The number of tracks to skipto")
+			.setDescription("O número de faixas para pular para")
 			.setRequired(true),
 	)
 	

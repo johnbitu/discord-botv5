@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("clear")
-	.setDescription("Clear all tracks from queue")
+	.setDescription("Limpa todas as músicas da fila")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {
@@ -28,7 +28,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("Nothing is playing right now."),
+						.setDescription("Nada está tocando agora."),
 				],
 				ephemeral: true,
 			});

@@ -8,11 +8,11 @@ const {
 
 const command = new SlashCommand()
   .setName("search")
-  .setDescription("Search for a song")
+  .setDescription("Procure por uma música")
   .addStringOption((option) =>
     option
       .setName("query")
-      .setDescription("The song to search for")
+      .setDescription("Que música você procura?")
       .setRequired(true)
   )
   .setRun(async (client, interaction, options) => {
@@ -71,7 +71,7 @@ const command = new SlashCommand()
       return interaction.reply({
         embeds: [
           new MessageEmbed()
-            .setDescription(`No results found for \`${search}\``)
+            .setDescription(`Nenhum resultado encontrado para \`${search}\``)
             .setColor("RED"),
         ],
         ephemeral: true,

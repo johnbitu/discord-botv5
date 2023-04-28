@@ -4,7 +4,7 @@ const prettyMilliseconds = require("pretty-ms");
 
 const command = new SlashCommand()
 	.setName("save")
-	.setDescription("Saves current song to your DM's")
+	.setDescription("Salva a música atual para a sua DM's")
 	.setRun(async (client, interaction) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {
@@ -29,7 +29,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("There is no music playing right now."),
+						.setDescription("Não há música tocando agora."),
 				],
 				ephemeral: true,
 			});
@@ -38,27 +38,27 @@ const command = new SlashCommand()
 		const sendtoDmEmbed = new MessageEmbed()
 			.setColor(client.config.embedColor)
 			.setAuthor({
-				name: "Saved track",
+				name: "Musica salva",
 				iconURL: `${ interaction.user.displayAvatarURL({ dynamic: true }) }`,
 			})
 			.setDescription(
-				`**Saved [${ player.queue.current.title }](${ player.queue.current.uri }) to your DM**`,
+				`**Salvou [${ player.queue.current.title }](${ player.queue.current.uri }) em sua DM**`,
 			)
 			.addFields(
 				{
-					name: "Track Duration",
+					name: "Duração da faixa",
 					value: `\`${ prettyMilliseconds(player.queue.current.duration, {
 						colonNotation: true,
 					}) }\``,
 					inline: true,
 				},
 				{
-					name: "Track Author",
+					name: "Autor da faixa",
 					value: `\`${ player.queue.current.author }\``,
 					inline: true,
 				},
 				{
-					name: "Requested Guild",
+					name: "Guilda solicitada",
 					value: `\`${ interaction.guild }\``,
 					inline: true,
 				},
@@ -71,7 +71,7 @@ const command = new SlashCommand()
 				new MessageEmbed()
 					.setColor(client.config.embedColor)
 					.setDescription(
-						"Please check your **DMs**. If you didn't receive any message from me please make sure your **DMs** are open",
+						"Verifique por favor sua **DMs**. Se você não recebeu nenhuma mensagem de mim, certifique-se que sua **DMs** está aberta",
 					),
 			],
 			ephemeral: true,

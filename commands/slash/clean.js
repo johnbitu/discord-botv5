@@ -5,8 +5,8 @@ const command = new SlashCommand()
 	.setDescription("Cleans the last 100 bot messages from channel.")
 	.addIntegerOption((option) =>
 		option
-			.setName("number")
-			.setDescription("Number of messages to delete.")
+			.setName("número")
+			.setDescription("Número de mensagens para deletar.")
 			.setMinValue(2).setMaxValue(100)
 			.setRequired(false),
 	)
@@ -31,13 +31,13 @@ const command = new SlashCommand()
 						!deletedMessages.some(deletedMsg => deletedMsg == msg);
 					});
 					if (messages.size > 0) {
-						client.log(`Deleting [${ messages.size }] messages older than 14 days.`)
+						client.log(`Excluindo [${ messages.size }]  mensagens com mais de 14 dias.`)
 						for (const msg of messages) {
 							await msg.delete();
 						}
 					}
 					
-					await interaction.editReply({ embeds: [client.Embed(`:white_check_mark: | Deleted ${ botMessages.length } bot messages`)] });
+					await interaction.editReply({ embeds: [client.Embed(`:white_check_mark: | ${ botMessages.length } Mensagem(s) do bot deletada(s)`)] });
 					setTimeout(() => {
 						interaction.deleteReply();
 					}, 5000);

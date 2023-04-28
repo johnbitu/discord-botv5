@@ -66,7 +66,7 @@ const command = new SlashCommand()
           require("../../package.json").version
         }; Build: ${gitHash}` +
         "\n" +
-        `[✨ Support Server](${client.config.supportServer}) | [Issues](${client.config.Issues}) | [Source](https://github.com/SudhanPlayz/Discord-MusicBot/tree/v5) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
+        `[✨ Support Server](${client.config.supportServer}) | [Source](https://github.com/johnbitu/discord-botv5) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
     });
 
     // Construction of the buttons for the embed
@@ -118,11 +118,11 @@ const command = new SlashCommand()
       helpEmbed.addFields({
         name: "Credits",
         value:
-          `Discord Music Bot Version: v${
+          `BotRadioFM Version: v${
             require("../../package.json").version
           }; Build: ${gitHash}` +
           "\n" +
-          `[✨ Support Server](${client.config.supportServer}) | [Issues](${client.config.Issues}) | [Source](https://github.com/SudhanPlayz/Discord-MusicBot/tree/v5) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
+          `[✨ Support Server](${client.config.supportServer}) | [Source](https://github.com/johnbitu/discord-botv5) | [Invite Me](https://discord.com/oauth2/authorize?client_id=${client.config.clientId}&permissions=${client.config.permissions}&scope=bot%20applications.commands)`,
       });
       await iter.update({
         embeds: [helpEmbed],

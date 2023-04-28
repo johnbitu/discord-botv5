@@ -4,7 +4,7 @@ const SlashCommand = require("../../lib/SlashCommand");
 
 const command = new SlashCommand()
 	.setName("autoqueue")
-	.setDescription("Automatically add songs to the queue (toggle)")
+	.setDescription("Adicionar músicas automaticamente à fila (alternar)")
 	.setRun(async (client, interaction) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {

@@ -9,7 +9,7 @@ const command = new SlashCommand()
       embeds: [
         new MessageEmbed()
           .setColor(client.config.embedColor)
-          .setTitle(`Invite me to your server!`),
+          .setTitle(`Me convide para seu servidor!`),
       ],
       components: [
         new MessageActionRow().addComponents(

@@ -5,7 +5,7 @@ const prettyMilliseconds = require("pretty-ms");
 
 const command = new SlashCommand()
 	.setName("nowplaying")
-	.setDescription("Shows the song currently playing in the voice channel.")
+	.setDescription("Mostra a música em reprodução no canal de voz.")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {
@@ -30,7 +30,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("The bot isn't in a channel."),
+						.setDescription("O bot não está em um canal."),
 				],
 				ephemeral: true,
 			});
@@ -41,7 +41,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("There's nothing playing."),
+						.setDescription("Nada está tocando agora."),
 				],
 				ephemeral: true,
 			});

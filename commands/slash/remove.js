@@ -3,11 +3,11 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("remove")
-	.setDescription("Remove track you don't want from queue")
+	.setDescription("Remove a música que você não quer da fila")
 	.addNumberOption((option) =>
 		option
-			.setName("number")
-			.setDescription("Enter track number.")
+			.setName("número")
+			.setDescription("Digite o número da música.")
 			.setRequired(true),
 	)
 	
@@ -37,7 +37,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("There are no songs to remove."),
+						.setDescription("Não há músicas para remover."),
 				],
 				ephemeral: true,
 			});
@@ -50,7 +50,7 @@ const command = new SlashCommand()
 			let thing = new MessageEmbed()
 				.setColor(client.config.embedColor)
 				.setDescription(
-					`Current queue has only **${ player.queue.size }** track`,
+					`A fila atual tem apenas **${ player.queue.size }** música(s)`,
 				);
 			return interaction.editReply({ embeds: [thing] });
 		}
@@ -61,7 +61,7 @@ const command = new SlashCommand()
 		const number = position + 1;
 		let removeEmbed = new MessageEmbed()
 			.setColor(client.config.embedColor)
-			.setDescription(`Removed track number **${ number }** from queue`);
+			.setDescription(`Número de música removida **${ number }** da fila`);
 		return interaction.editReply({ embeds: [removeEmbed] });
 	});
 

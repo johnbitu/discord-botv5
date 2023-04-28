@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("pause")
-	.setDescription("Pauses the current playing track")
+	.setDescription("Pausa a música atual")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {
@@ -28,7 +28,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("Nothing is playing."),
+						.setDescription("Não há nada tocando"),
 				],
 				ephemeral: true,
 			});
@@ -39,7 +39,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("Current playing track is already paused!"),
+						.setDescription("A música atual já está pausada!"),
 				],
 				ephemeral: true,
 			});
@@ -50,7 +50,7 @@ const command = new SlashCommand()
 			embeds: [
 				new MessageEmbed()
 					.setColor(client.config.embedColor)
-					.setDescription(`⏸ | **Paused!**`),
+					.setDescription(`⏸ | **Pausado!**`),
 			],
 		});
 	});

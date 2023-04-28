@@ -4,7 +4,7 @@ const SlashCommand = require("../../lib/SlashCommand");
 
 const command = new SlashCommand()
   .setName("autoleave")
-  .setDescription("Automatically leaves when everyone leaves the voice channel (toggle)")
+  .setDescription("Sai automaticamente quando todos saem do canal de voz (alternar)")
   .setRun(async (client, interaction) => {
     let channel = await client.getChannel(client, interaction);
     if (!channel) return;

@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("replay")
-	.setDescription("Replay current playing track")
+	.setDescription("Reproduz a música atual")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {
@@ -28,7 +28,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("I'm not playing anything."),
+						.setDescription("Nada está tocando agora."),
 				],
 				ephemeral: true,
 			});

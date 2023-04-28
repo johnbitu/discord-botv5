@@ -4,7 +4,7 @@ const SlashCommand = require("../../lib/SlashCommand");
 
 const command = new SlashCommand()
 	.setName("247")
-	.setDescription("Prevents the bot from ever disconnecting from a VC (toggle)")
+	.setDescription("Evita que o bot se desconecte de uma CALL (alternar)")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {

@@ -28,7 +28,7 @@ const command = new SlashCommand()
 				embeds: [
 					new MessageEmbed()
 						.setColor("RED")
-						.setDescription("There is nothing to skip."),
+						.setDescription("Não há nada para pular."),
 				],
 				ephemeral: true,
 			});

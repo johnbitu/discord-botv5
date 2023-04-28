@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 const command = new SlashCommand()
 	.setName("resume")
-	.setDescription("Resume current track")
+	.setDescription("Retoma a música atual")
 	.setRun(async (client, interaction, options) => {
 		let channel = await client.getChannel(client, interaction);
 		if (!channel) {
@@ -49,7 +49,7 @@ const command = new SlashCommand()
 			embeds: [
 				new MessageEmbed()
 					.setColor(client.config.embedColor)
-					.setDescription(`⏯ **Resumed!**`),
+					.setDescription(`⏯ **Retomado!**`),
 			],
 		});
 	});

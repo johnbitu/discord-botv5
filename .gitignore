@@ -77,7 +77,7 @@ typings/
 yarn.lock
 
 # dotenv environment variables file
-
+.dotenv
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -123,3 +123,4 @@ yarn.lock
 .idea/
 .vscode/
 .history/
+.env
